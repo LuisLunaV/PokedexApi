@@ -1,0 +1,112 @@
+img {
+  width:  188px;
+  height: 188px;
+}
+
+.imagen-pokemon {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nombre-pokemon {
+  font-family:  'Share Tech Mono', monospace;;
+  font-size: 20px;
+  background: linear-gradient( 65deg, #7CB342 0%,  #AED581   100%);
+  text-align: center;
+  padding: 18px 0px 18px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+ 
+}
+.information-pokemon{
+  height: 165px !important;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.information-pokemon .cont-info{
+  width: 90%;
+  height: 90%;
+  margin-top: 5px;
+  font-size: 1.2em;
+  text-align: justify;
+  font-family: 'VT323';
+}
+#cont-tipos{
+height: 75px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+}
+
+#cont-tipos h3{
+  padding: 4px 0px 4px 0px;
+  width: 90%;
+  border-radius: 9px;
+  box-shadow: -1px 3px 6px 1px rgba(0,0,0,.75);
+}
+#tipo-uno{
+  background: linear-gradient(to left, #EF9A9A 0%, #F44336 100%);
+
+}
+#tipo-dos{
+  background: linear-gradient(to left, #4FC3F7  0%, #0288D1 100%);
+  
+}
+
+.hierva{
+  background: linear-gradient(to left, #66BB6A 0%, #009900 100%);
+
+}
+.insecto{
+  background: linear-gradient(to left, #7CB342 0%, #66BB6A 100%);
+
+}
+.agua{
+  background: linear-gradient(to left, #81D4FA 0%, #29B6F6  100%);
+
+}
+.fuego{
+  background: linear-gradient(to left, #f5b041 0%, #ed8a0a 100%);
+}
+
+.electrico{
+  background: linear-gradient(to left, #FFF59D 0%, #FFFF33 100%);
+  
+}
+
+.psiquico{
+  background: linear-gradient(to left, #F8BBD0 0%, #EC407A  100%);
+}
+
+.fantasma{
+  background: linear-gradient(to left, #D2B4DE 0%, #6C3483   100%);
+
+}
+.roca{
+  background: linear-gradient(to left, #F4D03F 0%, #9A7D0A   100%);
+
+}
+.veneno{
+  background: linear-gradient(to left, #C39BD3 0%, #AF7AC5    100%);
+
+}
+.normal{
+  background: linear-gradient(to left, #A6ACAF 0%, #909497    100%);
+
+}
+.tierra{
+  background: linear-gradient(to left, #9A7D0A 50%, #FFFF33    100%);
+
+}
+.volador{
+  background: linear-gradient(to left, #00CCFF  0%,  #909497 90%);
+}
+.hada{
+  background: linear-gradient(to left, #FFCDD2   0%,  #FFCDD2 100%);
+}
