@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./styles/componentes.css">
     <link rel="shortcut icon" href="./icon/pokemon.ico" type="image/x-icon">
     <title>Pokedex</title>
 </head>
 <body>
+    <header>
+        <img src="./icon/Pokédex_logo.png" id='logo-pokedex' alt="Logo-pokedex">
+    </header>
     <section class='FlexContainer'>
     <div class="container">
         <div class="cont-pokemon">
@@ -20,9 +24,14 @@
     
         <input type="text" id="input-text" placeholder="Busca tu pokemon">
         <div class="text-btn">
-        <button id="search"></button>
+        <button id="search"></i></button>
         <button id="reset"></button>
-        <button id='info-poke'></button>
+        
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button id='info-poke'><i class="flecha fas fa-backward"></i></button> 
+        <button id='info-poke'><i class="flecha fas fa-forward"></i></button>          
+         </div>
+
         </div>
     </div>
 

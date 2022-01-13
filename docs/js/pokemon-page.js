@@ -5,12 +5,14 @@ const contenedor     = document.querySelector('.cont-pokemon'),
       contenedorInfo = document.querySelector('.information-pokemon');
 
 const imagenHtml = async ( dato )=>{
-
+    
  const tipo = dato.types[0].type.name;
 
     const html =`
     <div class='imagen-pokemon ${ tiposColor(tipo) }'>  
+    <div class='radio-pokemon ${ tiposColor(tipo) }'>
     <img src='${dato.sprites.front_default}' alt='imagen-del-pokemon' />
+    </div>
     </div>
     <div class='nombre-pokemon'>
     <h3>${dato.name}</h3> 
