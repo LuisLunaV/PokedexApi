@@ -182,7 +182,6 @@ align-items: center;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  width: auto;
   overflow: auto;
   flex-direction: row;
   overflow: hidden;
