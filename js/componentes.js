@@ -5,9 +5,12 @@ const buttons   = document.querySelector('.text-btn');
 
 export const eventos = ()=>{
 
+    let contador = 0;
+
     buttons.addEventListener('click', async ( event )=>{
 
     const btnNombre = event.target.id;
+   
 
     if(btnNombre === 'search'){
 
@@ -18,34 +21,58 @@ export const eventos = ()=>{
         typesHtml(      await getPokemon( nombre ));
 
         cajaTexto.value = '';
+       
 
     }else if(btnNombre === 'reset'){
 
-        while(contenedor.firstChild){
+        limpiarConetnedores( contenedor     );
+        limpiarConetnedores( contenedorInfo );
+        limpiarConetnedores( estatus        );
+        limpiarConetnedores( contenTipos    );
+        detenerLaVozDePokedex();
 
-            contenedor.removeChild( contenedor.firstChild );
+    }else if(btnNombre === 'forward'){
 
-        }
+       detenerLaVozDePokedex();
+       imagenHtml(     await getPokemon( contador = contador+1))
+       nivelPoderHtml( await getPokemon( contador ));
+       typesHtml(      await getPokemon( contador ));
 
-        while(contenedorInfo.firstChild){
+    }else if(btnNombre === 'backward'){
 
-            contenedorInfo.removeChild( contenedorInfo.firstChild );
+       detenerLaVozDePokedex();
+       imagenHtml(     await getPokemon( contador = contador-1))
+       nivelPoderHtml( await getPokemon( contador ));
+       typesHtml(      await getPokemon( contador ));
 
-        }
-
-        while(estatus.firstChild){
-
-            estatus.removeChild( estatus.firstChild )
-
-        }
-
-        while(contenTipos.firstChild){
-
-            contenTipos.removeChild( contenTipos.firstChild )
-
-        }
     }
 
     })
 
+}
+
+const limpiarConetnedores =( contenedor )=>{
+
+    while(contenedor.firstChild){
+
+        contenedor.removeChild( contenedor.firstChild )
+
+    }
+}
+
+export const vozDeLaPokedex =( informacion )=>{
+
+    let info = new SpeechSynthesisUtterance( informacion );
+    let voz  = window.speechSynthesis.getVoices();
+    info.voice = voz[ 2 ];
+    info.rate = 1.6; 
+    info.pitch = 1 ;
+    window.speechSynthesis.speak( info );
+
+}
+
+const detenerLaVozDePokedex =()=>{
+
+    let voz = window.speechSynthesis;
+    voz.cancel();
 }

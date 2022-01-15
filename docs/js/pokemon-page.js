@@ -1,4 +1,4 @@
-import { eventos, infoPokemon } from './index.js';
+import { eventos, infoPokemon, vozDeLaPokedex } from './index.js';
 const contenedor     = document.querySelector('.cont-pokemon'),
       contenTipos    = document.querySelector('#cont-tipos'),
       estatus        = document.querySelector('.status'),
@@ -21,18 +21,28 @@ const imagenHtml = async ( dato )=>{
     `;
 
     contenedor.innerHTML = html;
-   informacionHtml(await infoPokemon(dato.id) );
 
+   informacionHtml(await infoPokemon(dato.id), dato.name );
+
+   
 }
 
-const informacionHtml =( dato )=>{
+const informacionHtml =( dato, nombre )=>{
 
     const html = `<div class="cont-info">
     <p>${dato[0].flavor_text}</p>
     <p>${dato[1].flavor_text}</p>
+    <p>${dato[2].flavor_text}</p>
     </div>`;
 
     contenedorInfo.innerHTML = html;
+
+    vozDeLaPokedex( nombre );
+    vozDeLaPokedex(dato[0].flavor_text);
+    vozDeLaPokedex(dato[1].flavor_text);
+    vozDeLaPokedex(dato[2].flavor_text);
+
+
 }
 
 const nivelPoderHtml = ( dato )=>{
