@@ -61,12 +61,11 @@ const nivelPoderHtml = ( dato )=>{
 
 const typesHtml =( elemnt )=>{
 
-    const tipo    = elemnt.types[0].type.name;
+    const tipo = elemnt.types[0].type.name;
 
     if(elemnt.types.length == 1){
 
-        const htmlUno = `                 
-        <h3 class="${tiposColor(tipo)}">${elemnt.types[0].type.name}</h3>`;
+        const htmlUno = `<h3 class="${tiposColor(tipo)}">${elemnt.types[0].type.name}</h3>`;
 
         contenTipos.innerHTML = htmlUno;
 
